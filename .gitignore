@@ -1,0 +1,9 @@
+# Local build output
+*.exe
+# Debugger artifacts
+*.pdb
+*.ilk
+*.obj
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
