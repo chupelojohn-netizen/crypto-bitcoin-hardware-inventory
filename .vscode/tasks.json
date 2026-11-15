@@ -11,6 +11,8 @@
         "-Wextra",
         "-pedantic",
         "${workspaceFolder}/main.cpp",
+        "${workspaceFolder}/inventory_features.cpp",
+        "${workspaceFolder}/checkout_actions.cpp",
         "-o",
         "${workspaceFolder}/ecommerce"
       ],
@@ -24,6 +26,8 @@
           "-Wextra",
           "-pedantic",
           "${workspaceFolder}/main.cpp",
+          "${workspaceFolder}/inventory_features.cpp",
+          "${workspaceFolder}/checkout_actions.cpp",
           "-o",
           "${workspaceFolder}/ecommerce.exe"
         ]
