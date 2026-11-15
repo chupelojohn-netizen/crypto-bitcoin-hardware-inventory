@@ -1,0 +1,5 @@
+{
+  "C_Cpp.default.compilerPath": "${env:USERPROFILE}\\Documents\\Codex\\toolchains\\w64devkit\\bin\\g++.exe",
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.cStandard": "c17"
+}

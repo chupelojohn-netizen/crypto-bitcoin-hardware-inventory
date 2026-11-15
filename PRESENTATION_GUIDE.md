@@ -1,16 +1,55 @@
 # Presentation and Study Guide
 
-Use this to understand the program before presenting it. Explain the ideas in your own words, and change the demo brands or sample data if your group has approved a different roster.
+Use this guide to learn the flow before presenting. Keep the examples that match your build, and explain each idea in your own words. If your group approved a different brand roster, update the sample data before the demo.
 
-## Short project summary
+## Project at a glance
 
-The program is a small console shop for hardware wallets and accessories. A product has an ID, name, category, brand, price, and stock count. The program uses the data structures from Labs 1–8 to display products, search and sort the catalog, manage shopping lists, and process checkout orders.
+This is a small console inventory system for Bitcoin hardware wallets and accessories. Each product has an ID, name, category, brand, price, and stock count. The program uses the data structures from Labs 1–8 to display, search, and sort products, manage a cart and wishlist, and process checkout orders. The prices and products are sample data; the program does not handle Bitcoin or make real purchases.
+
+## Finding things in the project
+
+- Start in main.cpp to see how the program is assembled and how the menu routes each choice.
+- Open catalog.hpp for the growing product array and product ID tree.
+- Open structures.hpp for the cart, wishlist, queue, stacks, and circular brand list.
+- Open inventory_features.cpp for the search and sort demonstrations.
+- Open checkout_actions.cpp for the cart workflow and inventory changes during checkout, Undo, and Redo.
+- Shared records are in models.hpp; console input helpers are in input.hpp.
+
+A useful presentation habit is to open the related file before demonstrating that menu option. Point to the data structure first, then show the corresponding behavior in the running program.
+## Four-minute presentation plan
+
+| Time | Menu action | Main point |
+| --- | --- | --- |
+| 0:00–0:30 | Introduce the project | It manages sample inventory and demonstrates the course data structures. |
+| 0:30–1:00 | **1** — show the catalog | The catalog stores product records in a dynamic array. |
+| 1:00–1:40 | **3** — try a keyword search, then an ID search | A loop finds text matches; a balanced binary search tree finds an ID. |
+| 1:40–2:20 | **5** — add and browse cart items; add one wishlist item | The cart supports forward and backward movement; the wishlist moves forward. |
+| 2:20–3:10 | Queue the cart, return, then choose **6** | The checkout queue is FIFO; stock changes when the order is processed. |
+| 3:10–3:40 | **7** — undo, then redo | Stacks keep the latest checkout history and follow LIFO order. |
+| 3:40–4:00 | **8** and **9** — show the brand cycle and a sort | The circular list loops through brands; sorting demonstrates the selected algorithms. |
+
+If time is short, show the catalog, one search, checkout, and Undo/Redo. The longer walkthrough below gives the full sequence.
+
+## Main menu at a glance
+
+| Option | Feature | Structure or idea |
+| --- | --- | --- |
+| **1** | View catalog | Dynamic array |
+| **2** | Filter by brand | Linear scan |
+| **3** | Search by keyword or product ID | Linear search and binary search tree |
+| **4** | Filter by price range | Binary search on a price-sorted copy |
+| **5** | Manage cart and wishlist | Doubly linked list, singly linked list, and queueing an order |
+| **6** | Process the next checkout | FIFO queue |
+| **7** | Undo or redo a checkout | LIFO stacks |
+| **8** | Cycle through brand names | Circular linked list |
+| **9** | Sort inventory | Insertion sort or quicksort |
+| **10** | Exit | — |
 
 ## Suggested demo
 
-### Opening summary
+### Opening (about 20 seconds)
 
-You can introduce the project in your own words: it is a console inventory system for Bitcoin hardware and accessories. The demo shows how product data is stored and searched, how cart and checkout actions use linked lists and a queue, and how Undo/Redo changes inventory history. The sample prices and brand list are for demonstration.
+Introduce it in your own words: this console inventory system manages Bitcoin hardware and accessories. The demo shows how the catalog is stored and searched, how a cart becomes a checkout order, and how Undo/Redo restores inventory history. The brands and prices are examples for the project.
 
 ### 1. Show the catalog
 

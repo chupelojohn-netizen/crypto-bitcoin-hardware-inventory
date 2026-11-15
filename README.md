@@ -21,6 +21,20 @@ The catalog uses Ledger, Trezor, BitBox, and Coldcard as a sample partner roster
 | 9 | Display inventory using a selected sort. |
 | 10 | Exit. |
 
+## Project files
+
+| File | Purpose |
+| --- | --- |
+| main.cpp | Creates the sample catalog, connects the structures, and runs the main menu. |
+| models.hpp | Defines the product and checkout records shared by the program. |
+| input.hpp | Holds the small input and text helper functions. |
+| catalog.hpp | Implements the dynamic catalog and balanced product ID tree. |
+| structures.hpp | Implements the cart, wishlist, checkout queue and stacks, and circular brand list. |
+| inventory_features.hpp / inventory_features.cpp | Declares and implements keyword search, price-range search, and sorting choices. |
+| checkout_actions.hpp / checkout_actions.cpp | Declares and implements cart handling, checkout, Undo, and Redo actions. |
+| .vscode/ | Contains the build task and debugger settings for VS Code. |
+
+The menu stays in main.cpp; the feature routines are in separate implementation files. This makes it easier to find a feature and explain one part at a time.
 ## Where to find each lab
 
 | Lab | Code to look for | What it demonstrates |
